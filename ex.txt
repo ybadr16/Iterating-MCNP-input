@@ -1,0 +1,29 @@
+Example 1
+c This is where you should have your mcnp input
+c -----
+c cell card
+c ----
+1 1 -11.35 -1 2 imp:p=1 $big sphere
+2 0 -2  imp:p=1 $small sphere
+3 0 1  imp:p=0 $outside sphere
+
+c ----
+c surface card
+c ----
+1 so 5
+2 so 3.9
+
+c ---
+c data card
+c
+mode p
+c ---
+c materials
+c ---
+m1    82000  1
+c
+c source
+c -----
+SDEF PAR=2 POS= 0 0 0 ERG = 1
+NPS 100000
+F1:P 1
